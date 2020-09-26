@@ -10,7 +10,6 @@ import Adafruit_DHT
 from google.cloud import bigquery
 
 _SENSOR = Adafruit_DHT.DHT22
-_CLIENT = bigquery.Client()
 
 
 def _dht_data(sensor_id, sensor_pin):
@@ -30,15 +29,16 @@ def _gbq_insert(dht_data, project_id, dataset_id, table_id):
     """
     Inserts dht data into BigQuery.
     """
+    client = bigquery.Client()
 
     def _table(project_id, dataset_id, table_id):
         dataset = bigquery.dataset.DatasetReference.from_string(
             f"{project_id}.{dataset_id}"
         )
-        return _CLIENT.get_table(dataset.table(table_id))
+        return client.get_table(dataset.table(table_id))
 
     dht_data["inserted_at"] = datetime.now()
-    errors = _CLIENT.insert_rows(_table(project_id, dataset_id, table_id), [dht_data])
+    errors = client.insert_rows(_table(project_id, dataset_id, table_id), [dht_data])
     if errors:
         raise RuntimeError(errors)
 
