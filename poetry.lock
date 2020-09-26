@@ -1,15 +1,11 @@
 [[package]]
 category = "main"
 description = "Library to get readings from the DHT11, DHT22, and AM2302 humidity and temperature sensors on a Raspberry Pi or Beaglebone Black."
-name = "Adafruit-DHT"
+name = "adafruit-dht-fixed"
 optional = false
 python-versions = "*"
 version = "1.4.2"
 
-[package.source]
-reference = "fe9f52d1964eedc203cfc0cc278b6f5edf8bb0e8"
-type = "git"
-url = "https://github.com/janjagusch/Adafruit_Python_DHT"
 [[package]]
 category = "dev"
 description = "A small Python module for determining appropriate platform-specific dirs, e.g. a \"user data dir\"."
@@ -442,12 +438,15 @@ python-versions = "*"
 version = "1.12.1"
 
 [metadata]
-content-hash = "47ee770a09fcb53caef01bee84c54463fd08d6aaee7161a96f0fa79b2a08f940"
+content-hash = "afe2f3980341edc424bf58b0d375fcb91cf0ea82ca41a8731f0284c7600324de"
 lock-version = "1.0"
 python-versions = "^3.7"
 
 [metadata.files]
-Adafruit-DHT = []
+adafruit-dht-fixed = [
+    {file = "Adafruit_DHT_Fixed-1.4.2-py3-none-any.whl", hash = "sha256:d52d1b21355f04b27a993286f225855551f55b0deacb09acd3352a3005a5a707"},
+    {file = "Adafruit_DHT_Fixed-1.4.2.tar.gz", hash = "sha256:67ac6a34ab63d81bbc0e6ea09456238aaad1d65acb1a78743ce5140dc493d847"},
+]
 appdirs = [
     {file = "appdirs-1.4.4-py2.py3-none-any.whl", hash = "sha256:a841dacd6b99318a741b166adb07e19ee71a274450e68237b4650ca1055ab128"},
     {file = "appdirs-1.4.4.tar.gz", hash = "sha256:7d5d0167b2b1ba821647616af46a749d1c653740dd0d2415100fe26e27afdf41"},
