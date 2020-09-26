@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "dht22-to-gbq"
-version = "0.1.0"
+version = "0.1.1"
 description = "Requests data from a DHT22 sensor and inserts it into Google BigQuery."
 authors = ["Jan-Benedikt Jagusch <jan.jagusch@gmail.com>"]
 license = "MIT"
