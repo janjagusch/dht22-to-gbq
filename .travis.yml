@@ -27,5 +27,5 @@ jobs:
         - poetry run make lint
     - stage: release
       script:
-        - .bin/check_release
+        - .bin/check_release $TRAVIS_TAG
         - poetry publish --build
