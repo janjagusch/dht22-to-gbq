@@ -39,7 +39,6 @@ def _gbq_insert(dht_data, client, table):
     """
     Inserts dht data into BigQuery.
     """
-    dht_data["inserted_at"] = datetime.now()
     errors = client.insert_rows(table, [dht_data])
     if errors:
         raise RuntimeError(errors)
