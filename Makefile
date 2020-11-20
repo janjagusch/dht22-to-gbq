@@ -1,14 +1,14 @@
 @PHONY: format_black
 format_black:
-	black dht_to_gbq
+	black .
 
 @PHONY: lint_black
 lint_black:
-	black --check dht_to_gbq
+	black --check .
 
 @PHONY: lint_pylint
 lint_pylint:
-	pylint dht_to_gbq
+	pylint main.py
 
 @PHONY: lint
 lint:
